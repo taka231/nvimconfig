@@ -1,0 +1,137 @@
+[[plugins]]
+#tender
+repo = 'jacoborus/tender.vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline.git'
+hook_source = '''
+let g:airline_theme = 'tender'
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes.git'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+source = 'release'
+build = 'coc#util#install()'
+hook_add = '''
+"ノーマルモードで
+"スペースhでHover
+nnoremap <silent> <space>h :<C-u>call CocAction('doHover')<cr>
+"スペースdfでDefinition
+nnoremap <silent> <space>df <Plug>(coc-definition)
+"スペースrfでReferences
+nnoremap <silent> <space>rf <Plug>(coc-references)
+"スペースrnでRename
+nnoremap <silent> <space>rn <Plug>(coc-rename)
+"スペースfmtでFormat
+nnoremap <silent> <space>fmt <Plug>(coc-format)
+'''
+
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+
+[[plugins]]
+repo = 'lambdalisue/fern-git-status.vim'
+
+[[plugins]]
+repo = 'yuki-yano/fern-preview.vim'
+hook_add = '''
+function! s:fern_settings() abort
+  nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
+  nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
+  nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
+  nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
+endfunction
+
+augroup fern-settings
+  autocmd!
+  autocmd FileType fern call s:fern_settings()
+augroup END
+'''
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+hook_add = '''
+" Find files using Telescope command-line sugar.
+nnoremap <space>ff <cmd>Telescope find_files<cr>
+nnoremap <space>fg <cmd>Telescope live_grep<cr>
+nnoremap <space>fb <cmd>Telescope buffers<cr>
+nnoremap <space>fh <cmd>Telescope help_tags<cr>
+'''
+
+[[plugins]]
+repo = 'kyazdani42/nvim-web-devicons'
+
+[[plugins]]
+repo = 'machakann/vim-sandwich'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_add = '''
+nnoremap <space>r <Plug>(quickrun)
+'''
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = 'kassio/neoterm'
+hook_add = '''
+let g:neoterm_default_mod='belowright'
+let g:neoterm_size=20
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-[> <C-\><C-n>
+nnoremap <c-t><c-t> :Ttoggle<cr><c-w>jA
+tnoremap <c-t><c-t> <c-\><c-n>:Ttoggle<cr>
+'''
+
+[[plugins]]
+repo = 'LeafCage/yankround.vim'
+hook_add = '''
+nmap p <Plug>(yankround-p)
+xmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap gp <Plug>(yankround-gp)
+xmap gp <Plug>(yankround-gp)
+nmap gP <Plug>(yankround-gP)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
+'''
+
+[[plugins]]
+repo = 'terryma/vim-expand-region'
+hook_add = '''
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+'''
+
+[[plugins]]
+repo = 'yuttie/comfortable-motion.vim'
+hook_add = '''
+let g:comfortable_motion_interval = 2400.0 / 60
+let g:comfortable_motion_friction = 100.0
+let g:comfortable_motion_air_drag = 3.0
+'''
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_add = '''
+nmap m <Plug>(easymotion-s2)
+xmap m <Plug>(easymotion-s2)
+autocmd User EasyMotionPromptBegin silent! CocDisable
+autocmd User EasyMotionPromptEnd silent! CocEnable
+'''

@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/taka2/llvm-survey/rust'
+let g:netrw_dirhist_0='/home/taka2/vimstudy/files'
+let g:netrw_dirhist_9='/home/taka2/vimstudy'
+let g:netrw_dirhist_8='/home/taka2/vimstudy/auto_complete'
+let g:netrw_dirhist_7='/home/taka2/vimstudy'
+let g:netrw_dirhist_6='/home/taka2/vimstudy/auto_complete'
+let g:netrw_dirhist_5='/home/taka2/vimstudy/auto_complete/webapp/public'
+let g:netrw_dirhist_4='/home/taka2/vimstudy/auto_complete/webapp/public/js'
+let g:netrw_dirhist_3='/home/taka2/vimstudy/auto_complete/webapp/public'
+let g:netrw_dirhist_2='/home/taka2/vimstudy/auto_complete/webapp'
