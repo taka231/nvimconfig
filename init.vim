@@ -75,3 +75,10 @@ set expandtab
 set hidden
 nnoremap <c-j> :bprev<cr>
 nnoremap <c-k> :bnext<cr>
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  }
+}
+EOF

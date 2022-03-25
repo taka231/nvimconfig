@@ -135,3 +135,6 @@ xmap m <Plug>(easymotion-s2)
 autocmd User EasyMotionPromptBegin silent! CocDisable
 autocmd User EasyMotionPromptEnd silent! CocEnable
 '''
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
