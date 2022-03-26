@@ -97,6 +97,9 @@ tnoremap <Esc> <C-\><C-n>
 tnoremap <C-[> <C-\><C-n>
 nnoremap <c-t><c-t> :Ttoggle<cr><c-w>jA
 tnoremap <c-t><c-t> <c-\><c-n>:Ttoggle<cr>
+nnoremap <silent> <C-s> :TREPLSendLine<CR>j0
+vnoremap <silent> <C-s> V:TREPLSendSelection<CR>'>j0
+let g:neoterm_autoscroll = 1
 '''
 
 [[plugins]]
